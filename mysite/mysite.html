@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Raleway:wght@300&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <a href="" class="fas fa-house" id="shopping"></a>
+      <nav class="nav">
+        <section class="flex">
+          <div class="accordion">
+            <ul>
+            <li><a href="#menu">меню</a>
+              <i class="fas fa-angle-down"></i>
+              <ul>
+                <li><a href="stone/stone.html">таш куралдары</a></li>
+                <li><a href="musics/music.html">музыкалык аспаптар</a></li>
+                <li><a href="Headress/headress.html">калпактар</a></li>
+                <li><a href="drawing/drawing.html">оймо чиймелер</a></li>
+                <li><a href="nationalclothes/national-clothes.html">улуттук кийимдер</a></li>
+                <li><a href="#">баалуу эстеликтер </a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">байланышуу </a><i class="fas fa-angle-down"></i>
+              <ul>
+                <li><a href="https://wa.me/+996222017686">тел номер</a></li>
+                <li><a href="#">ватсап номер</a></li>
+                <li><a href="#">инстаграмм аккаунт  </a></li>
+              </ul>
+            </li>
+            <li class="author-hover"><a href="#">автор </a><i class="fas fa-angle-down"></i>
+              <ul class="author">
+                <div class="profile">
+                  <img src="images/profile.jpeg" alt="">
+                </div>
+                <li><i class="fas fa-user"></i><a>Нурсадык</a></li>
+                <li><i class="fas fa-phone"></i><a>222017686</a></li>
+                <li><i class="fas fa-instagram"></i><a href="">kulamidinov01</a></li>
+              </ul>
+            </li>
+            </ul>
+        </div>
+        </section>
+      </nav>
+      <div class="icons">
+        <div class="search-box">
+        <input type="text" name="" id="text-to-find" value="" placeholder="издөө" />
+      <button
+      type="button"
+      onclick="javascript: FindOnPage('text-to-find'); return false;" > 
+    <i class="fas fa-search"></i></button>
+</div>
+        <a class="btn-right" id="myBtn">кирүү</a>
+        <div class="fas fa-bars" id="menu-btn"></div>
+      </div>
+    </header>
+        
+<div class="slideshow-container" id="home">
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img  src="images/mountainkyrgyzstan.jpg" width="100%">
+    <div class="text">Биздин сайтка кош келиңиздер
+      <a href="" class="btn" style="display: block; background-color: rgb(23, 154, 255, 0.7);">кененирээк билүү</a>
+      <button id="unders" class="btn" style="display: block; width: 100%; border: 0; ">түшүндүрмө</button>
+    <div id="modalfirst">
+      <span class="close-one">&times;</span>
+        <div class="modalfirst-content">
+          <h5 style="margin-bottom:10px ;">видео түшүндүрмө</h5>
+          <video src="understand.mp4" controls></video>
+        </div>
+    </div>
+    </div>
+  </div>
+  </div>
+    </section>
+    <section class="menu" id="menu">
+      <h1 class="heading">биздин <span>товарлар</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="images">
+            <img
+              src="https://fsd.multiurok.ru/html/2020/04/20/s_5e9ddb6880c3e/1424527_3.jpeg  "
+              alt=""
+            />
+          </div>
+          <h3> таш куралдары</h3>
+          <div class="price">20% арзандатуулар</div>
+          <button class="btn"  id="my_Btn1">кирип көрүү</button>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img
+              src="https://muzinstru.ru/wp-content/uploads/2020/08/komuz-instrument.jpg"
+              alt=""
+              width=""/>
+          </div>
+          <h3>музыкалык аспаптар</h3>
+          <div class="price">25% арзандатуулар</div>
+          <button class="btn" id="my_Btn2">кирип көрүү</button>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img
+              src="https://is-souvenir.com/upload/resize_cache/webp/iblock/a47/a47e83802422b2f91632a91a26ee9653.webp"
+              alt=""
+            />
+          </div>
+          <h3>улуттук баш кийимдер</h3>
+          <div class="price">15% арзандатуулар</div>
+          <button class="btn" id="my_Btn3">кирип көрүү</button>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img
+              src="images/oimo8.jpg"
+              alt=""
+            />
+          </div>
+          <h3>оймо чиймелер</h3>
+          <div class="price">25% арзандатуулар</div>
+          <button class="btn" id="my_Btn4">кирип көрүү</button>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img
+              src="images/kamzur.gif"
+              alt=""
+            style="max-width:200px ; margin: auto;"/>
+          </div>
+          <h3> улуттук кийимдер</h3>
+          <div class="price">25% арзандатуулар</div>
+          <button class="btn" id="my_Btn5">кирип көрүү</button>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/0a/6a/40/monument-to-manas-the.jpg?w=500&h=400&s=1"
+              alt=""
+            />
+          </div>
+          <h3>баалуу эстеликтер</h3>
+          <div class="price">25% арзандатуулар</div>
+          <button class="btn" id="my_Btn6">кирип көрүү</button>
+        </div>
+      </div>
+    </section>
+     <!--contact section-->
+     <section class="contact" id="contact">
+      <h1 class="heading">байла<span>НЫШУУ</span></h1>
+      <div class="row">
+        <form method="post">
+          <input type="text" id="name" placeholder="аты жөнүңүз" required />
+          <input type="email" id="email" placeholder="email почтаңыз" />
+          <input type="text" id="phone" placeholder="телефон номериңиз" />
+          <textarea id="message" rows="4" placeholder="ой пикир"></textarea>
+          <button type="submit" id="submit-btn">жөнөтүү</button>
+        </form>
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48223.772080660354!2d72.94535577345749!3d40.93797939202377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bd15d8a133b83b%3A0x90171ce532ac790!2z0JLQm9Ca0KHQnA!5e0!3m2!1sru!2skg!4v1676027296875!5m2!1sru!2skg"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+    <!--contact section ends-->
+    <!--review section start-->
+    <section class="review" id="review">
+      <h1 class="heading">пикирлер</h1>
+      <div class="box-container">
+        <div class="box">
+        <div class="images">
+          <img src="images/mountainkyrgyzstan.jpg" alt="">
+        </div>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+         </div> 
+            <h2>Касымбаев бектур</h2>
+            <p>Мага бул сайт өзгөчө жакты анткени бул сайтта өзүңө керектүүлөрдүн баарын таба алат экенсиң жана кыргыздын улуттук кийимдерин оймо чиймелерин дээрлик көп сайттан кезиктирүүгө болбойт баары арзан баада жана сапаттуу товарлар  мен сиздерге бул сайтты абдан сунуштамакмын.  </p>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img src="images/mountainkyrgyzstan.jpg" alt="">
+          </div>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+           </div> 
+              
+
+
+
+           <h2>Абдимиталипова Айдана</h2>
+           <p>Достор сиздер бул сайтты колдонуу менен озүңүзгө пайда гана алып келесиз деп ойлойм анткени бул сайтты колдонуу бир топ ишти тездетет жеңилдетет жана ыңгайлуу. Мен бул сайтты колдонуп жатып сайтты иштеп чыккан адамга аябай ыраазы болдум сиздерге да колдонууну сунуштайм.</p>
+
+          </div>
+          <div class="box">
+            <div class="images">
+              <img src="images/mountainkyrgyzstan.jpg" alt="">
+            </div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+             </div> 
+             <h2>Мамажанов Арзыбек</h2>
+              <p> Аябай жакшы экен достор колдонуңуздар мен дайыма эле товар сатып алып жүрөм   баары арзан баада жана сапаттуу товарлар кирип сиз да сатып алсаңыз болот  мен сиздерге бул сайтты а сунуштамакмын.</p>
+               
+            </div>
+      </div>
+    </section>
+     <!--review section ends-->
+     <!--footer section start-->
+     <section class="footer">
+      <img src="images/mountainkyrgyzstan.jpg">
+      <div class="box-container">
+        <div class="box">
+          <h3>Биз жөнүндө</h3>
+          <p>
+            Биздин интернет магазин биздин келечегибиз боло турган жаш
+            өспүрүмдөр үчүн ачылды, сиздер биздин сайттан өзүңүзгө керек болгон
+            кийимдерди арзан жана ыңгайлуу баада таба аласыз. Жана ошондой эле
+            биздин интернет магазинде сиз издеп жүргөн кийимдер жана сиз
+            ойлогондой арзандатуулар болуп турат. Андыктан достор сайтка
+            катталабыз биздин дүкөн сиздердин келечегиңиздер үчүн кам көрөт.
+            Байланыш үчүн телефон: <span>0228 84-29-81</span>
+          </p>
+        </div>
+        <div class="box">
+          <h3>категория</h3>
+          <a href="#"><i class="fas fa-arrow-right"></i>эркек </a>
+          <a href="#"><i class="fas fa-arrow-right"></i>аял</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>алуучу</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>балдар</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>жаңы келгендер</a>
+        </div>
+        <div class="box">
+          <h3>ссылка</h3>
+          <a href="#home"><i class="fas fa-arrow-right"></i>башкы-бет</a>
+          <a href="#menu"><i class="fas fa-arrow-right"></i>товарлар</a>
+          <a href="#review"><i class="fas fa-arrow-right"></i>пикирлер</a>
+          <a href="#contact"><i class="fas fa-arrow-right"></i>байланыш</a>
+          
+        </div>
+        <div class="box">
+          <h3>байланыш</h3>
+          <a href="tel:+996222017686"
+            ><i class="fas fa-arrow-right"></i> <span>0222017686</span></a
+          >
+          <a href=""
+            ><i class="fas fa-arrow-right"></i>kulamidinov01</a
+          >
+          <a href="#"><i class="fas fa-arrow-right"></i>иштөө убакыты:</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>8:00 9:00чейин</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>дем алышсыз</a>
+        </div>
+      </div>
+        <div class="share">
+          <a href="https://facebook.com" class="fab fa-facebook-f"></a>
+          <a href="https://pinterest.com" class="fab fa-pinterest"></a>
+          <a href="https://linkedin.com" class="fab fa-linkedin"></a>
+          <a href="https://instsgram.com" class="fab fa-instagram"></a>
+          <a href="https://twitter.com" class="fab fa-twitter"></a>
+        </div>
+      <div class="credit">&copy Нурсадык тарабынын жасалган</div>
+    </section>
+    <!--footer section ends-->
+<!-- The Modal -->  
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+      <h2 class="title-phonebook">КАТТАЛУУ</h2>
+      <div class="phone-container">
+      <div class="phone">
+         <h2>аты жөнүңүз</h2>
+        <input
+        type="text"
+        name="userName"
+        placeholder="аты жөнүңүз"/>
+        <h2>логин</h2>
+        <input
+          type="login"
+          name="login"
+          placeholder="логин" 
+          id="login"/>
+      <h2>сыр сөз</h2>
+        <input
+          type="password"
+          name="password"
+          placeholder="сыр сөз"
+          id="password"/>
+        <button  id="check" onclick="check()">кирүү</button>
+      </div>
+    </div>
+</div>
+<!-- The Modal ends -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+   let btn_submit=document.getElementById('btn-submit');
+     btn_submit.addEventListener('click',function(e){
+      e.preventDefault()
+      let name=document.getElementById('name').value;
+      let email=document.getElementById('email').value;
+      let phone=document.getElementById('phone').value;
+      let message=document.getElementById('message').value;
+      let body='name: '+ name +'<br/> email: ' + email + '<br/> phone' + phone +'<br/> message '+ message;
+      
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "tugolbajuulunursadyk@gmail.com",
+          Password: "nursadyk19912001",
+          To: "tugolbajuulunursadyk@gmail.com",
+          From: email,
+          Subject: phone,
+          Body: body,
+        }).then(
+        message => alert(message)
+        );
+      })
+</script>
+    <script>
+      let under=document.getElementById('unders');
+      let modalfirst = document.getElementById('modalfirst');
+      let close =document.getElementsByClassName('close-one')[0];
+      under.onclick=()=>{
+        modalfirst.style.display="block";
+      }
+      close.onclick=()=>{
+        modalfirst.style.display="none";
+      }
+  
+      //navbar start
+      let nav = document.querySelector(".nav");
+
+      document.querySelector("#menu-btn").onclick = () => {
+        nav.classList.toggle("active");
+      };
+      window.onscroll =()=>{
+        nav.classList.remove("active");
+      }
+      //navbar ends
+      //serchbar start
+      var LastResFind = "";
+      var copy_page = "";
+      function TrimStr(s) {
+        s = s.replace(/^\s+/g, "");
+        return s.replace(/\s+$/g, "");
+      }
+      function FindOnPage(inputId) {
+        var obj = window.document.getElementById(inputId);
+        var textToFind;
+        if (obj) {
+          textToFind = TrimStr(obj.value);
+        } else {
+          alert("киргизилген сөз табылган жок");
+          return;
+        }
+        if (textToFind == "") {
+          alert("сиз эч нерсе жазган жоксуз");
+          return;
+        }
+        if (document.body.innerHTML.indexOf(textToFind) == "-1")
+          alert("ничего нетнайдено");
+        if (copy_page.length > 0) document.body.innerHTML = copy_page;
+        else copy_page = document.body.innerHTML;
+        document.body.innerHTML = document.body.innerHTML.replace(
+          eval("/name=" + LastResFind + "/gi"),
+          ""
+        );
+        document.body.innerHTML = document.body.innerHTML.replace(
+          eval("/" + textToFind + "/gi"),
+          "<a name =" +
+            textToFind +
+            " style='color:red'>" +
+            textToFind +
+            "</a>"
+        );
+        LastResFind = textToFind;
+        window.location = "#" + textToFind;
+      }
+      //searchbar ends
+// modal start
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+
+window.onclick = function(event) {  
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+}
+
+//modal ends
+  function check (){
+  let login = document.getElementById('login').value;
+  let password = document.getElementById('password').value;
+  
+  if(login == 'Iam' && password == '234'){
+    alert('сиз ийгиликтүү катталдыңыз');
+  }
+  else if(login == '' && password == ''){
+    alert('жолчолорду толтуруңуз');
+  }
+  else {
+    alert('туура эмес логин же пароль') ;
+}
+}
+let _btn1=document.getElementById('my_Btn1').onclick=()=>{
+  let login = document.getElementById('login').value;
+  let password = document.getElementById('password').value;
+  if(login == 'Iam' && password == '234'){
+    top.location.href="stone/stone.html";
+  }else{
+    alert('сайтка катталыңыз!!! \n катталуу үчүн кирүү кнопкасын басыңыз');
+  }
+}
+let _btn2=document.getElementById('my_Btn2').onclick=()=>{
+  let login = document.getElementById('login').value;
+  let password = document.getElementById('password').value;
+  if(login == 'Iam' && password == '234'){
+    top.location.href="musics/music.html";
+  }else{
+    alert('сайтка катталыңыз!!! \n катталуу үчүн кирүү кнопкасын басыңыз');
+  }
+}
+let _btn3=document.getElementById('my_Btn3').onclick=()=>{
+  let login = document.getElementById('login').value;
+  let password = document.getElementById('password').value;
+  if(login == 'Iam' && password == '234'){
+    top.location.href="Headress/headress.html";
+  }else{
+    alert('сайтка катталыңыз!!! \n катталуу үчүн кирүү кнопкасын басыңыз');
+  }
+}
+let _btn4=document.getElementById('my_Btn4').onclick=()=>{
+  let login = document.getElementById('login').value;
+  let password = document.getElementById('password').value;
+  if(login == 'Iam' && password == '234'){
+    top.location.href="drawing/drawing.html";
+  }else{
+    alert('сайтка катталыңыз!!! \n катталуу үчүн кирүү кнопкасын басыңыз');
+  }
+}
+let _btn5=document.getElementById('my_Btn5').onclick=()=>{
+  let login = document.getElementById('login').value;
+  let password = document.getElementById('password').value;
+  if(login == 'Iam' && password == '234'){
+    top.location.href="nationalclothes/national-clothes.html";
+  }else{
+    alert('сайтка катталыңыз!!! \n катталуу үчүн кирүү кнопкасын басыңыз');
+  }
+}
+let _btn6=document.getElementById('my_Btn6').onclick=()=>{
+  let login = document.getElementById('login').value;
+  let password = document.getElementById('password').value;
+  if(login == 'Iam' && password == '234'){
+    top.location.href="musics/music.html";
+  }else{
+    alert('сайтка катталыңыз!!! \n катталуу үчүн кирүү кнопкасын басыңыз');
+  }
+}
+    </script>
+  </body>
+</html>

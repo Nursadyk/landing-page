@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Автор</title>
+    <style>
+      :root {
+        --red: #eb4d4b;
+        --black: #130f40;
+        --light: #666;
+        --border: 0.1rem solid rgba(0, 0, 0, 0.3);
+        --box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+      }
+      * {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transform: 0.2s linear;
+      }
+      html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-padding-top: 9rem;
+        scroll-behavior: smooth;
+      }
+      html::-webkit-scrollbar {
+        width: 0.8rem;
+      }
+      html::-webkit-scrollbar-thumb {
+        background: var(--red);
+        border-radius: 5rem;
+      }
+      section {
+        padding: 2rem 5%;
+      }
+      .about .row {
+        display: flex;
+        align-items: center;
+        background: var(--black);
+        flex-wrap: wrap;
+      }
+      .about .row .image {
+        max-height: 20rem;
+      }
+      .about .row .image img {
+        max-width: 200px;
+      }
+      .about .row .image {
+        flex: 1 1 45rem;
+      }
+      .about .row .content {
+        flex: 1 1 45rem;
+        padding: 2rem;
+      }
+      .about .row .content h3 {
+        font-size: 3rem;
+        color: #fff;
+      }
+      .about .row .content p {
+        font-size: 1.6rem;
+        color: #ccc;
+        padding: 1rem 0;
+        line-height: 1.8;
+        text-transform: lowercase;
+      }
+      .about .row .content p span {
+        color: var(--red);
+      }
+    </style>
+  </head>
+  <body>
+    <!--about section start-->
+    <section class="about" id="about">
+      <h1 class="heading"><span>биз</span>жөнүндө</h1>
+      <div class="row">
+        <div class="image">
+          <img src="authorimage2.jpg" />
+        </div>
+        <div class="content">
+          <h3>Достор биз ачылдык</h3>
+          <p>
+            Биздин интернет магазин биздин келечегибиз боло турган жаш
+            өспүрүмдөр үчүн ачылды, сиздер биздин сайттан өзүңүзгө керек болгон
+            кийимдерди арзан жана ыңгайлуу баада таба аласыз.
+          </p>
+          <p>
+            Жана ошондой эле биздин интернет магазинде сиз издеп жүргөн кийимдер
+            жана сиз ойлогондой арзандатуулар болуп турат. Андыктан достор
+            сайтка катталабыз биздин дүкөн сиздердин келечегиңиздер үчүн кам
+            көрөт. Байланыш үчүн телефон: <span>0228 84-29-81</span>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--about section end-->
+  </body>
+</html>

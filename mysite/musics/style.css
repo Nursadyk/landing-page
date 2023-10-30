@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-thumb {
+  background: blue;
+  border-radius: 10px;
+}
+body {
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid black;
+}
+header .fa-home {
+  font-size: 25px;
+}
+header .navbar {
+  display: flex;
+}
+header .navbar a {
+  position: relative;
+  display: block;
+  font-size: 20px;
+  padding: 3px 10px 3px 10px;
+  margin-left: 3rem;
+  color: rgb(34, 31, 31);
+  transition: 0.5s;
+}
+header .navbar a:hover {
+  transform: scale(1.5);
+  opacity: 1;
+  filter: blur(0);
+  color: #fff;
+}
+header .navbar a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: blue;
+  transition: 0.5;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+  color: #fff;
+}
+header .navbar a:hover::before {
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мызыкалык аспаптар</title>
+    <!--google fonts-->
+    <link
+      rel="stylesheet"
+      href="@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Raleway:wght@300&family=Roboto:wght@100;300;400;500&display=swap');"
+    />
+    <!--font links-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Css/style.css" />
+    <!--css file link-->
+    <style>
+      :root {
+        --red: #eb4d4b;
+        --black: #130f40;
+        --light: #666;
+        --border: 0.1rem solid rgba(0, 0, 0, 0.3);
+        --box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+      }
+      * {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transform: 0.2s linear;
+      }
+      html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-padding-top: 9rem;
+        scroll-behavior: smooth;
+      }
+      html::-webkit-scrollbar {
+        width: 0.8rem;
+      }
+      html::-webkit-scrollbar-thumb {
+        background: var(--red);
+        border-radius: 5rem;
+      }
+      section {
+        margin-top: 5rem;
+        padding: 5rem;
+      }
+      .btn {
+        margin-top: 1rem;
+        display: inline-block;
+        padding: 0.9rem 3rem;
+        font-size: 1.7rem;
+        color: #fff;
+        background: var(--red);
+        cursor: pointer;
+        border-radius: 2rem;
+      }
+      .btn:hover {
+        letter-spacing: 0.2rem;
+      }
+      .heading {
+        text-align: center;
+        color: var(--black);
+        text-transform: uppercase;
+        padding-bottom: 3.5rem;
+        font-size: 4rem;
+      }
+      .heading span {
+        text-align: center;
+        color: var(--red);
+      }
+      .dark-mode {
+        background: #000;
+        color: #fff;
+      }
+      .header {
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 7%;
+        border-bottom: var(--border);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        box-shadow: var(--box-shadow);
+      }
+      .header a {
+        font-size: 3rem;
+        color: var(--red);
+      }
+      .header .fa-shopping-cart {
+        font-size: 3rem;
+        color: var(--red);
+      }
+      .header .navbar a {
+        margin: 0 1.5rem;
+        font-size: 1.6rem;
+        color: var(--light);
+      }
+      .header .navbar a:hover {
+        color: var(--red);
+        border-bottom: 0.1rem solid var(--red);
+        padding-bottom: 0.5rem;
+      }
+      .header .icons div {
+        color: var(--light);
+        cursor: pointer;
+        font-size: 2.5rem;
+        margin-left: 2rem;
+      }
+      .header .icons div:hover {
+        color: var(--red);
+      }
+      #menu-btn {
+        display: none;
+      }
+      .header .search-from {
+        position: absolute;
+        top: 115%;
+        right: 7%;
+        background: #fff;
+        width: 50rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        transform: scaleY(0);
+        transform-origin: top;
+      }
+      .header .search-from.active {
+        transform: scaleY(1);
+      }
+      .header .search-from input {
+        height: 100%;
+        width: 100%;
+        font-size: 1.6rem;
+        color: var(--black);
+        padding: 1rem;
+        text-transform: none;
+      }
+      .header .search-from label {
+        cursor: pointer;
+        font-size: 2.2rem;
+        margin-right: 1.5rem;
+        color: var(--black);
+      }
+      .header .search-from label:hover {
+        color: var(--main-color);
+      }
+
+      /*media vewport*/
+      @media (max-width: 991px) {
+        html {
+          font-size: 50%;
+        }
+        .header {
+          padding: 1.5rem 2rem;
+        }
+        section {
+          padding: 2rem;
+        }
+      }
+      @media (max-width: 768px) {
+        #menu-btn {
+          display: inline-block;
+        }
+        .header .navbar {
+          position: absolute;
+          top: 100%;
+          right: -100%;
+          background: #fff;
+          width: 30rem;
+          height: calc(100vh - 9.5rem);
+        }
+        .header .navbar.active {
+          right: 0;
+        }
+        .header .navbar a {
+          display: block;
+          color: var(--black);
+          margin: 1.5rem;
+          padding: 0.5rem;
+          font-size: 2rem;
+        }
+        .header .search-from {
+          width: 90%;
+          right: 2rem;
+        }
+        .home {
+          background-position: left;
+          justify-content: center;
+          text-align: center;
+        }
+        .home .content h3 {
+          font-size: 4.5rem;
+        }
+        .home .content p {
+          font-size: 1.5rem;
+        }
+      }
+      @media (max-width: 450px) {
+        html {
+          font-size: 50%;
+        }
+        .home .content h3 {
+          font-size: 1.5rem;
+          text-align: left;
+        }
+        .footer .box-container .box {
+          text-align: center;
+        }
+      }
+      /*media vewport end*/
+
+      .menu .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        gap: 1.5rem;
+      }
+      .menu .box-container .box {
+        text-align: center;
+        border: var(--border);
+        height: 40rem;
+        margin-bottom: 8rem;
+      }
+      .menu .box-container img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .menu .box-container .box .price {
+        max-width: 20rem;
+        margin: 0 auto;
+        color: var(--red);
+        font-size: 2.5rem;
+      }
+      .products .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 1.5rem;
+      }
+      .products .box-container .box {
+        text-align: center;
+        border: var(--border);
+        padding: 2rem;
+      }
+      .products .box-container .box .icons span {
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+        border: var(--border);
+        color: var(--red);
+        margin: 0.2rem 1.5rem 0;
+        cursor: pointer;
+      }
+      .products .box-container .box .icons a:hover {
+        background: var(--light);
+      }
+      .products .box-container .box .image {
+        padding: 2.5rem 0;
+      }
+      .products .box-container .box .image {
+        padding: 2.5rem 0;
+      }
+      .products .box-container .box .image img {
+        height: 25rem;
+      }
+      .products .box-container .box .content h3 {
+        color: var(--black);
+        font-size: 2.5rem;
+      }
+      .products .box-container .box .content .stars {
+        padding: 1.5rem;
+      }
+      .products .box-container .box .content .stars i {
+        font-size: 1.7rem;
+        color: var(--red);
+      }
+      .products .box-container .box .content .price {
+        color: var(--red);
+        font-size: 2.5rem;
+      }
+      .products .box-container .box .content .price span {
+        font-size: 1.5rem;
+        text-decoration: line-through;
+        font-weight: lighter;
+      }
+      .footer {
+        background: #f9f9f9;
+      }
+      .footer .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 1.5rem;
+      }
+      .footer .box-container .box h3 {
+        font-size: 2.2rem;
+        color: var(--black);
+        padding: 1rem 0;
+      }
+      .footer .box-container .box p {
+        font-size: 1.4rem;
+        color: var(--light);
+        padding: 1rem 0;
+      }
+      .footer .box-container .box a {
+        display: block;
+        font-size: 1.4rem;
+        color: var(--light);
+        padding: 1rem 0;
+      }
+      .footer .box-container .box a:hover {
+        color: var(--red);
+      }
+      .footer .box-container .box a i {
+        padding-right: 0.5rem;
+        color: var(--red);
+      }
+      .footer .box-container .box a i:hover {
+        padding-right: 2rem;
+      }
+      .footer .share {
+        padding-top: 2rem;
+        text-align: center;
+      }
+      .footer .share a {
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        border-radius: 50%;
+        background: var(--black);
+        color: #fff;
+        margin: 0.3rem;
+      }
+      .footer .share a:hover {
+        background: var(--red);
+        transform: rotate(360deg);
+      }
+      .footer .credit {
+        margin-top: 2.5rem;
+        padding: 1rem;
+        border-top: var(--border);
+        text-align: center;
+        color: var(--light);
+      }
+    </style>
+  </head>
+  <body>
+    <!--header start-->
+    <header class="header">
+      <a
+        href="file:///C:/Users/user/Desktop/mysite/mysite.html"
+        class="fas fa-arrow-left"
+      >
+      </a>
+      <nav class="navbar">
+        <a href="#suits">комуздар</a>
+        <a href="#trouthes">чоорлор</a>
+        <a href="#ties">гитаралар</a>
+        <a href="#shoose">ооз комуздар</a>
+      </nav>
+      <div class="icons">
+        <div class="fas fa-toggle-on" onclick="darkMode()"></div>
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+      </div>
+      <div class="search-from">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box" class="fas fa-search"></label>
+      </div>
+    </header>
+    <!--header end-->
+    <!--section start-->
+
+    <!--suits section ends-->
+    <!--trouthes section start-->
+    <section class="products" id="trouthes">
+      <h1 class="heading">арзан<span>ДАТУУЛАР</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://new.bizdin.kg/media/book_img/%D0%BA%D0%BE%D0%BC%D1%83%D0%B7.webp"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <div class="price">
+              600сом <span>1200сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ4AkshP9yJAQRPzqnPqg3CgS7iDw5DLsUSFO2YS5bcOwwd8QFSIrqtUSGU3PMe_KQTBM&usqp=CAU"
+            />
+          </div>
+          <div class="content">
+            <div class="price">
+              880сом <span>2000сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://preview.free3d.com/img/2014/01/2272830900452460253/5ww2q4i1.jpg"
+            />
+          </div>
+          <div class="content">
+            <div class="price">
+              760сом <span>2300сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://is-souvenir.com/upload/resize_cache/webp/iblock/55f/55fa6fe71f8368b82d62ef9242c89cb8.webp"
+            />
+          </div>
+          <div class="content">
+            <div class="price">
+              880сом <span>2000сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="" />
+          </div>
+          <div class="content">
+            <div class="price">
+              880сом <span>2000сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="" />
+          </div>
+          <div class="content">
+            <div class="price">
+              880сом <span>2000сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="" />
+          </div>
+          <div class="content">
+            <div class="price">
+              880сом <span>2000сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="" />
+          </div>
+          <div class="content">
+            <div class="price">
+              880сом <span>2000сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--trouthes section ends-->
+    <!--ties start-->
+
+    <!--ties ends-->
+    <!--shoose start-->
+    <section class="products" id="shoose">
+      <h1 class="heading">арзан<span>ДАТУУЛАР</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://ae04.alicdn.com/kf/S73b1f2e2ae874bdf8f89b17f58247e7cA.jpg_640x640.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <div class="price">
+              600сом <span>1200сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://m.media-amazon.com/images/I/61+8-c1XnjS._UY500_.jpg"
+            />
+          </div>
+          <div class="content">
+            <div class="price">
+              880сом <span>2000сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://5.imimg.com/data5/HR/YP/YD/SELLER-90058063/men-stylish-shoes-500x500.jpg"
+            />
+          </div>
+          <div class="content">
+            <div class="price">
+              760сом <span>2300сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://5.imimg.com/data5/XC/UE/ZR/SELLER-90058063/girls-black-casual-shoes-500x500.jpg"
+            />
+          </div>
+          <div class="content">
+            <div class="price">
+              880сом <span>2000сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://m.media-amazon.com/images/I/61KvFP6DY5L._UY500_.jpg"
+            />
+          </div>
+          <div class="content">
+            <div class="price">
+              880сом <span>2000сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="https://m.media-amazon.com/images/I/41pLQR2rs2L.jpg" />
+          </div>
+          <div class="content">
+            <div class="price">
+              880сом <span>2000сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://m.media-amazon.com/images/I/71+-OMhipMS._UY575_.jpg"
+            />
+          </div>
+          <div class="content">
+            <div class="price">
+              880сом <span>2000сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img
+              src="https://m.media-amazon.com/images/I/71qfPs-S4rL._SY695_.jpg"
+            />
+          </div>
+          <div class="content">
+            <div class="price">
+              880сом <span>2000сом</span>
+              <a href="payment.html" class="btn">сатып алуу</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--shoose ends-->
+    <!--footer section start-->
+    <section class="footer">
+      <img src="images/mountainkyrgyzstan.jpg" style="width: 100%" />
+      <div class="box-container">
+        <div class="box">
+          <h3>Биз жөнүндө</h3>
+          <p>
+            Биздин интернет магазин биздин келечегибиз боло турган жаш
+            өспүрүмдөр үчүн ачылды, сиздер биздин сайттан өзүңүзгө керек болгон
+            кийимдерди арзан жана ыңгайлуу баада таба аласыз. Жана ошондой эле
+            биздин интернет магазинде сиз издеп жүргөн кийимдер жана сиз
+            ойлогондой арзандатуулар болуп турат. Андыктан достор сайтка
+            катталабыз биздин дүкөн сиздердин келечегиңиздер үчүн кам көрөт.
+            Байланыш үчүн телефон: <span>0228 84-29-81</span>
+          </p>
+        </div>
+        <div class="box">
+          <h3>категория</h3>
+          <a href="#"><i class="fas fa-arrow-right"></i>эркек </a>
+          <a href="#"><i class="fas fa-arrow-right"></i>аял</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>алуучу</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>балдар</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>жаңы келгендер</a>
+        </div>
+        <div class="box">
+          <h3>ссылка</h3>
+          <a href="#home"><i class="fas fa-arrow-right"></i>башкы-бет</a>
+          <a href="#about" id="about"
+            ><i class="fas fa-arrow-right"></i>биз-жөнүндө</a
+          >
+          <a href="#menu"><i class="fas fa-arrow-right"></i>товарлар</a>
+          <a href="#review"><i class="fas fa-arrow-right"></i>пикирлер</a>
+          <a href="#contact"><i class="fas fa-arrow-right"></i>байланыш</a>
+          <a href="#blog"><i class="fas fa-arrow-right"></i>блог</a>
+        </div>
+        <div class="box">
+          <h3>байланыш</h3>
+          <a href="tel:+996222017686"
+            ><i class="fas fa-arrow-right"></i> <span>0222017686</span></a
+          >
+          <a href="tugolbajuulunursadyk.@gmail.com"
+            ><i class="fas fa-arrow-right"></i>tugolbajuulunursadyk@gmail.com</a
+          >
+          <a href="#"><i class="fas fa-arrow-right"></i>иштөө убакыты:</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>8:00 9:00чейин</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>дем алышсыз</a>
+        </div>
+      </div>
+      <div class="share">
+        <a href="https://facebook.com" class="fab fa-facebook-f"></a>
+        <a href="https://pinterest.com" class="fab fa-pinterest"></a>
+        <a href="https://linkedin.com" class="fab fa-linkedin"></a>
+        <a href="https://instsgram.com" class="fab fa-instagram"></a>
+        <a href="https://twitter.com" class="fab fa-twitter"></a>
+      </div>
+      <div class="credit">&copy Нурсадык тарабынын жасалган</div>
+    </section>
+    <!--footer section ends-->
+    <!--script start-->
+    <script>
+      let searchform = document.querySelector(".search-from");
+
+      document.querySelector("#search-btn").onclick = () => {
+        searchform.classList.toggle("active");
+        navbar.classList.remove("active");
+        cartitem.classList.remove("active");
+      };
+      window.onscroll = () => {
+        searchform.classList.remove("active");
+      };
+      //darc mode//
+      function darkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
+    <!--script ends-->
+  </body>
+</html>
